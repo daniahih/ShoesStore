@@ -1,0 +1,52 @@
+#products {
+  text-align: center;
+}
+#products .pro {
+  width: 20%;
+  min-width: 300px;
+  padding: 10px 12px;
+  border: 1px solid #dca68c;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  position: relative;
+  margin-left: 10%;
+}
+#products .pro img {
+  width: 100%;
+  border-radius: 20px;
+  height: 200px;
+}
+.edit_btn {
+  width: 100px;
+  border: 2px solid;
+}
+.delete_btn {
+  width: 100px;
+  border: 2px solid;
+}
+.add_btn {
+  width: 100px;
+  border: 2px solid;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: -400px;
+  margin-left: 500px;
+  width: 400px;
+  border: 1px solid black;
+  height: 60vh;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="text"] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

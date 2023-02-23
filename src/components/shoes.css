@@ -20,6 +20,7 @@
   justify-content: space-between;
   padding-top: 20px;
 }
+
 #products .pro img {
   width: 100%;
   border-radius: 20px;
@@ -30,14 +31,22 @@
 #products .pro .description {
   text-align: start;
   padding: 10px 0;
+  text-align: center;
 }
 #products .pro .description span {
   color: #606063;
-  font-size: 12px;
+  font-size: 18px;
   text-decoration: none;
 }
 #products .pro .description p {
   padding-top: 7px;
   color: #1a1a1a;
   font-size: 14px;
+  text-align: center;
+}
+#products .pro h4 {
+  padding: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #660922;
 }

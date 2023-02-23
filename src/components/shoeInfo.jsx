@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import "./shoeInfo.css";
 const ShoeInfo = () => {
   const [shoe, setShoe] = useState({});
   const params = useParams();
@@ -94,37 +94,46 @@ const ShoeInfo = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div id="products">
+      <div class="pro">
+        <img src={shoe.picture} alt="pic" width="100px" height="100px" />
         <h1>{params.id}</h1>
         <h1>{shoe.name}</h1>
-        <img src={shoe.picture} alt="pic" width="100px" height="100px" />
       </div>
-      <button onClick={editHandler}>Edit</button>
-      <button onClick={deleteHandler}>Delete</button>
-      <button onClick={addHandler}>Add</button>
-
-      <input
-        type="text"
-        placeholder="Name..."
-        style={{ margin: "20px" }}
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      ></input>
-      <input
-        type="text"
-        placeholder="Id..."
-        style={{ margin: "20px" }}
-        value={id}
-        onChange={(e) => setId(e.target.value)}
-      ></input>
-      <input
-        type="text"
-        placeholder="Price..."
-        style={{ margin: "20px" }}
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      ></input>
+      <button className="edit_btn" onClick={editHandler}>
+        Edit
+      </button>
+      <button className="delete_btn" onClick={deleteHandler}>
+        Delete
+      </button>
+      <button className="add_btn" onClick={addHandler}>
+        Add
+      </button>
+      <form>
+        <label> Add Name</label>
+        <input
+          type="text"
+          placeholder="Name..."
+          style={{ margin: "20px" }}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        ></input>
+        <input
+          type="text"
+          placeholder="Id..."
+          style={{ margin: "20px" }}
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+        ></input>
+        <label> Add Price</label>
+        <input
+          type="text"
+          placeholder="Price..."
+          style={{ margin: "20px" }}
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        ></input>
+      </form>
     </div>
   );
 };

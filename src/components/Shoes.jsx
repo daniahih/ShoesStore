@@ -7,11 +7,6 @@ const Shoes = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [shoes, setShoes] = useState([]);
 
-  // const shoesArray = [
-  //   {"picture":"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/470.jpg","name":"Terry Turcotte","price":"265.00","id":"1"}
-  // ];
-  const shoesArray = [];
-
   const getItems = () => {
     fetch("https://63f74cb5e40e087c958b9059.mockapi.io/shoes")
       .then((res) => res.json())
@@ -47,10 +42,10 @@ const Shoes = () => {
             >
               <div class="pro">
                 <div class="description">
-                  <img src={shoe.picture}></img>
+                  <img src={shoe.picture} alt={shoe.picture}></img>
                   <span> {shoe.id}</span>
                   <p>{shoe.name} </p>
-                  <span>{shoe.price}</span>
+                  <h4> &#8362;{shoe.price}</h4>
                 </div>
               </div>
             </Link>
