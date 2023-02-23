@@ -1,0 +1,9 @@
+#main {
+  background-image: url("https://images.unsplash.com/photo-1536593998369-f0d25ed0fb1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  width: 87%;
+  height: 56vh;
+  background-repeat: no-repeat;
+  background-position: top 55% left 10%;
+  background-size: cover;
+  padding: 80px 80px;
+}

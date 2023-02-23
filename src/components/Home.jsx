@@ -1,7 +1,8 @@
+import "./Home.css";
 const HomePage = () => {
   return (
     <>
-      <h1> Home </h1>
+      <section id="main"></section>
     </>
   );
 };

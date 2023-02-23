@@ -36,12 +36,24 @@ const Shoes = () => {
     return <div>Error: {error.message}</div>;
   } else {
     return (
-      <div>
+      <div
+        style={{
+          display: "grid",
+          border: "1px solid black",
+          gridTemplateColumns: "repeat(5, 200px)",
+          gap: 50,
+          alignItems: "center",
+        }}
+      >
         {shoes.map((shoe) => (
           <Link to={`/ShoeInfo/${shoe.id}`}>
             <div
               key={shoe.id}
-              style={{ display: "flex", border: "1px solid black" }}
+              style={{
+                display: "grid",
+                border: "1px solid black",
+                width: "200px",
+              }}
             >
               <div> {shoe.id}</div>
               <div>{shoe.name} </div>
