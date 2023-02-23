@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./shoes.css";
 
 const Shoes = () => {
   const [error, setError] = useState(null);
@@ -36,32 +37,25 @@ const Shoes = () => {
     return <div>Error: {error.message}</div>;
   } else {
     return (
-      <div
-        style={{
-          display: "grid",
-          border: "1px solid black",
-          gridTemplateColumns: "repeat(5, 200px)",
-          gap: 50,
-          alignItems: "center",
-        }}
-      >
-        {shoes.map((shoe) => (
-          <Link to={`/ShoeInfo/${shoe.id}`}>
-            <div
-              key={shoe.id}
-              style={{
-                display: "grid",
-                border: "1px solid black",
-                width: "200px",
-              }}
+      <div id="products">
+        <p> New year collection</p>
+        <div class="product-container">
+          {shoes.map((shoe) => (
+            <Link
+              to={`/ShoeInfo/${shoe.id}`}
+              style={{ textDecoration: "none" }}
             >
-              <div> {shoe.id}</div>
-              <div>{shoe.name} </div>
-              <img src={shoe.picture}></img>
-              <span>{shoe.price}</span>
-            </div>
-          </Link>
-        ))}
+              <div class="pro">
+                <div class="description">
+                  <img src={shoe.picture}></img>
+                  <span> {shoe.id}</span>
+                  <p>{shoe.name} </p>
+                  <span>{shoe.price}</span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     );
   }
