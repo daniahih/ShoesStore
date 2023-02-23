@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const shoeInfo = () => {
+const ShoeInfo = () => {
   const [shoe, setShoe] = useState({});
   const params = useParams();
   const [name, setName] = useState("");
@@ -128,4 +128,4 @@ const shoeInfo = () => {
     </div>
   );
 };
-export default shoeInfo;
+export default ShoeInfo;
