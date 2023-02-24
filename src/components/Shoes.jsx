@@ -8,7 +8,7 @@ const Shoes = () => {
   const [shoes, setShoes] = useState([]);
 
   const getItems = () => {
-    fetch("https://63f74cb5e40e087c958b9059.mockapi.io/shoes")
+    fetch("https://63f862ec6978b1f91058264e.mockapi.io/shoes")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -34,7 +34,7 @@ const Shoes = () => {
     return (
       <div id="products">
         <p> New year collection</p>
-        <div class="product-container">
+        <div className="product-container">
           {shoes.map((shoe) => (
             <Link
               to={`/ShoeInfo/${shoe.id}`}
@@ -42,7 +42,7 @@ const Shoes = () => {
             >
               <div class="pro">
                 <div class="description">
-                  <img src={shoe.picture} alt={shoe.picture}></img>
+                  <img src={shoe.img} alt={shoe.img}></img>
                   <span> {shoe.id}</span>
                   <p>{shoe.name} </p>
                   <h4> &#8362;{shoe.price}</h4>

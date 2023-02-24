@@ -7,14 +7,11 @@ const ShoeInfo = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [id, setId] = useState("");
-  const [pic, setPic] = useState(
-    "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/470.jpg"
-  );
-
+  const [newPic, setNewPic] = useState("");
   useEffect(() => {
     const itemData = async () => {
       const item = await fetch(
-        `https://63f74cb5e40e087c958b9059.mockapi.io/shoes/${params.id}`
+        `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${params.id}`
       );
       const res = await item.json();
       setShoe(res);
@@ -31,13 +28,13 @@ const ShoeInfo = () => {
     console.log(id);
 
     const item = await fetch(
-      `https://63f74cb5e40e087c958b9059.mockapi.io/shoes/${id}`,
+      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${id}`,
       {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, id }),
+        body: JSON.stringify({ price, name, id }),
       }
     );
     if (item.ok) {
@@ -56,7 +53,7 @@ const ShoeInfo = () => {
     console.log(id);
 
     const item = await fetch(
-      `https://63f74cb5e40e087c958b9059.mockapi.io/shoes/${id}`,
+      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${id}`,
       {
         method: "DELETE",
       }
@@ -75,13 +72,13 @@ const ShoeInfo = () => {
     e.preventDefault();
 
     const item = await fetch(
-      `https://63f74cb5e40e087c958b9059.mockapi.io/shoes`,
+      `https://63f862ec6978b1f91058264e.mockapi.io/shoes`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ pic, name, price }),
+        body: JSON.stringify({ newPic, name, price }),
       }
     );
     if (item.ok) {
@@ -92,13 +89,37 @@ const ShoeInfo = () => {
 
     const res = await item.json();
   };
+  const updatePicHandler = async (e) => {
+    e.preventDefault();
+    console.log(newPic);
 
+    const item = await fetch(
+      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ img: newPic }),
+      }
+    );
+    if (item.ok) {
+      alert("Picture updated successfully!");
+      setShoe({ ...shoe, img: newPic });
+    } else {
+      alert("Failed to update picture.");
+    }
+
+    const res = await item.json();
+    console.log(res);
+  };
   return (
     <div id="products">
       <div class="pro">
-        <img src={shoe.picture} alt="pic" width="100px" height="100px" />
+        <img src={shoe.img} alt="pic" width="100px" height="100px" />
         <h1>{params.id}</h1>
         <h1>{shoe.name}</h1>
+        <h4> &#8362;{shoe.price}</h4>
       </div>
       <button className="edit_btn" onClick={editHandler}>
         Edit
@@ -109,6 +130,10 @@ const ShoeInfo = () => {
       <button className="add_btn" onClick={addHandler}>
         Add
       </button>
+      <button className="update_pic_btn" onClick={updatePicHandler}>
+        Update Picture
+      </button>
+
       <form>
         <label> Add Name</label>
         <input
@@ -132,6 +157,14 @@ const ShoeInfo = () => {
           style={{ margin: "20px" }}
           value={price}
           onChange={(e) => setPrice(e.target.value)}
+        ></input>
+        <label> Add Image URL</label>
+        <input
+          type="text"
+          placeholder="Image URL..."
+          style={{ margin: "20px" }}
+          value={newPic}
+          onChange={(e) => setNewPic(e.target.value)}
         ></input>
       </form>
     </div>
