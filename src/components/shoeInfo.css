@@ -12,32 +12,42 @@
   margin: 15px 0;
   position: relative;
   margin-left: 10%;
+  height: 80vh;
 }
 #products .pro img {
   width: 100%;
   border-radius: 20px;
   height: 200px;
+  height: 40vh;
 }
 .edit_btn {
-  width: 100px;
+  width: 150px;
   border: 2px solid;
+  height: 25px;
 }
 .delete_btn {
-  width: 100px;
+  width: 150px;
   border: 2px solid;
+  height: 25px;
 }
 .add_btn {
-  width: 100px;
+  width: 150px;
   border: 2px solid;
+  height: 25px;
+}
+.update_pic_btn {
+  width: 150px;
+  border: 2px solid;
+  height: 25px;
 }
 form {
   display: flex;
   flex-direction: column;
-  margin-top: -450px;
+  margin-top: -470px;
   margin-left: 500px;
   width: 400px;
   border: 1px solid black;
-  height: 60vh;
+  height: 70vh;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -49,4 +59,12 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1000px;
+  position: absolute;
+  margin-top: -400px;
+  gap: 20px;
 }

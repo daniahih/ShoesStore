@@ -121,18 +121,20 @@ const ShoeInfo = () => {
         <h1>{shoe.name}</h1>
         <h4> &#8362;{shoe.price}</h4>
       </div>
-      <button className="edit_btn" onClick={editHandler}>
-        Edit
-      </button>
-      <button className="delete_btn" onClick={deleteHandler}>
-        Delete
-      </button>
-      <button className="add_btn" onClick={addHandler}>
-        Add
-      </button>
-      <button className="update_pic_btn" onClick={updatePicHandler}>
-        Update Picture
-      </button>
+      <div className="btn-container">
+        <button className="edit_btn" onClick={editHandler}>
+          Edit
+        </button>
+        <button className="delete_btn" onClick={deleteHandler}>
+          Delete
+        </button>
+        <button className="add_btn" onClick={addHandler}>
+          Add
+        </button>
+        <button className="update_pic_btn" onClick={updatePicHandler}>
+          Update Picture
+        </button>
+      </div>
 
       <form>
         <label> Add Name</label>
