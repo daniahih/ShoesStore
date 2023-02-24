@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./shoes.css";
-
+import Additem from "./AddItem";
 const Shoes = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,6 +34,8 @@ const Shoes = () => {
     return (
       <div id="products">
         <p> New year collection</p>
+        <Link to="/Additem"> Add</Link>
+
         <div className="product-container">
           {shoes.map((shoe) => (
             <Link

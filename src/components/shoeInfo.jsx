@@ -34,7 +34,7 @@ const ShoeInfo = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ price, name, id }),
+        body: JSON.stringify({ price, name, id, newPic }),
       }
     );
     if (item.ok) {

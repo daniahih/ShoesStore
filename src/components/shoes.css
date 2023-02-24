@@ -2,15 +2,15 @@
   text-align: center;
 }
 #products .pro {
-  width: 50%;
-  min-width: 300px;
+  width: 30%;
+  height: 20vh;
   padding: 10px 12px;
   border: 1px solid #dca68c;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   margin: 15px 0;
-  position: relative;
+  position: absolute;
 }
 
 #products .product-container {
@@ -19,6 +19,7 @@
   grid-template-rows: repeat(2, 1fr);
   justify-content: space-between;
   padding-top: 20px;
+  position: relative;
 }
 
 #products .pro img {

@@ -24,21 +24,25 @@
   width: 150px;
   border: 2px solid;
   height: 25px;
+  border-radius: 20px;
 }
 .delete_btn {
   width: 150px;
   border: 2px solid;
   height: 25px;
+  border-radius: 20px;
 }
 .add_btn {
   width: 150px;
   border: 2px solid;
   height: 25px;
+  border-radius: 20px;
 }
 .update_pic_btn {
   width: 150px;
   border: 2px solid;
   height: 25px;
+  border-radius: 20px;
 }
 form {
   display: flex;
