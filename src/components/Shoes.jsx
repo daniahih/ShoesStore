@@ -34,7 +34,7 @@ const Shoes = () => {
     return (
       <div id="products">
         <p> New year collection</p>
-        <Link to="/Additem"> Add</Link>
+        <Link to="/Additem"> Add Item</Link>
 
         <div className="product-container">
           {shoes.map((shoe) => (

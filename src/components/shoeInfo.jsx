@@ -68,27 +68,6 @@ const ShoeInfo = () => {
     console.log(res);
   };
 
-  const addHandler = async (e) => {
-    e.preventDefault();
-
-    const item = await fetch(
-      `https://63f862ec6978b1f91058264e.mockapi.io/shoes`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ newPic, name, price }),
-      }
-    );
-    if (item.ok) {
-      alert("Post Add successfully!");
-    } else {
-      alert("Failed to Add post.");
-    }
-
-    const res = await item.json();
-  };
   const updatePicHandler = async (e) => {
     e.preventDefault();
     console.log(newPic);
@@ -127,9 +106,6 @@ const ShoeInfo = () => {
         </button>
         <button className="delete_btn" onClick={deleteHandler}>
           Delete
-        </button>
-        <button className="add_btn" onClick={addHandler}>
-          Add
         </button>
         <button className="update_pic_btn" onClick={updatePicHandler}>
           Update Picture
