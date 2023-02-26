@@ -4,10 +4,10 @@ import "./shoeInfo.css";
 const ShoeInfo = () => {
   const [shoe, setShoe] = useState({});
   const params = useParams();
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [id, setId] = useState("");
-  const [newPic, setNewPic] = useState("");
+  const [name, setName] = useState(shoe.name);
+  const [price, setPrice] = useState(shoe.price);
+  // const [id, setId] = useState("");
+  const [newPic, setNewPic] = useState(shoe.img);
   useEffect(() => {
     const itemData = async () => {
       const item = await fetch(
@@ -25,16 +25,20 @@ const ShoeInfo = () => {
   const editHandler = async (e) => {
     e.preventDefault();
     console.log(name);
-    console.log(id);
+    // console.log(id);
 
     const item = await fetch(
-      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${id}`,
+      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${params.id}`,
       {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ price, name, id, newPic }),
+        body: JSON.stringify({
+          name: name,
+          img: newPic,
+          price: price,
+        }),
       }
     );
     if (item.ok) {
@@ -50,10 +54,10 @@ const ShoeInfo = () => {
   const deleteHandler = async (e) => {
     e.preventDefault();
     console.log(name);
-    console.log(id);
+    // console.log(id);
 
     const item = await fetch(
-      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${id}`,
+      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${params.id}`,
       {
         method: "DELETE",
       }
@@ -73,7 +77,7 @@ const ShoeInfo = () => {
     console.log(newPic);
 
     const item = await fetch(
-      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${id}`,
+      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${params.id}`,
       {
         method: "PUT",
         headers: {
@@ -121,13 +125,13 @@ const ShoeInfo = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         ></input>
-        <input
+        {/* <input
           type="text"
           placeholder="Id..."
           style={{ margin: "20px" }}
           value={id}
           onChange={(e) => setId(e.target.value)}
-        ></input>
+        ></input> */}
         <label> Add Price</label>
         <input
           type="text"
