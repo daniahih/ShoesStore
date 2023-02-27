@@ -9,8 +9,11 @@ const MainNavBar = () => {
             <Link to="/"> Home</Link>
           </li>
           <li>
-            <Link to="/shoes"> Shoes</Link>
+            <Link to="/shoes"> New Arrivals</Link>
           </li>
+          <li>Women</li>
+          <li> Men</li>
+          <li>About Us</li>
         </ul>
       </nav>
     </header>
