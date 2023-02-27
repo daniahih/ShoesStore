@@ -72,30 +72,6 @@ const ShoeInfo = () => {
     console.log(res);
   };
 
-  const updatePicHandler = async (e) => {
-    e.preventDefault();
-    console.log(newPic);
-
-    const item = await fetch(
-      `https://63f862ec6978b1f91058264e.mockapi.io/shoes/${params.id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ img: newPic }),
-      }
-    );
-    if (item.ok) {
-      alert("Picture updated successfully!");
-      setShoe({ ...shoe, img: newPic });
-    } else {
-      alert("Failed to update picture.");
-    }
-
-    const res = await item.json();
-    console.log(res);
-  };
   return (
     <div id="products">
       <div class="pro">
@@ -110,9 +86,6 @@ const ShoeInfo = () => {
         </button>
         <button className="delete_btn" onClick={deleteHandler}>
           Delete
-        </button>
-        <button className="update_pic_btn" onClick={updatePicHandler}>
-          Update Picture
         </button>
       </div>
 

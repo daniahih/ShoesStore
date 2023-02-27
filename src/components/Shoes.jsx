@@ -32,18 +32,18 @@ const Shoes = () => {
     return <div>Error: {error.message}</div>;
   } else {
     return (
-      <div id="products">
+      <div id="shoes-products">
         <p> New year collection</p>
         <Link to="/Additem"> Add Item</Link>
 
-        <div className="product-container">
+        <div className="shoes-product-container">
           {shoes.map((shoe) => (
             <Link
               to={`/ShoeInfo/${shoe.id}`}
               style={{ textDecoration: "none" }}
             >
-              <div class="pro">
-                <div class="description">
+              <div className="shoes-pro">
+                <div className="shoes-description">
                   <img src={shoe.img} alt={shoe.img}></img>
                   <span> {shoe.id}</span>
                   <p>{shoe.name} </p>

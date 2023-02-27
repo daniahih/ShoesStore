@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./style.css";
+import "./AddItem.css";
 
 const Additem = () => {
   const [shoe, setShoe] = useState({});
@@ -30,7 +30,7 @@ const Additem = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ newPic, name, price }),
+        body: JSON.stringify({ img: newPic, name, price }),
       }
     );
     if (item.ok) {
@@ -44,26 +44,24 @@ const Additem = () => {
   return (
     <>
       <div>
-        <button className="add_btn" onClick={addHandler}>
-          Add
-        </button>
-
         <form className="form">
           <label> Add Name</label>
           <input
+            className="input"
             type="text"
             placeholder="Name..."
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></input>
-          <input
+          {/* <input
             type="text"
             placeholder="Id..."
             value={id}
             onChange={(e) => setId(e.target.value)}
-          ></input>
+          ></input> */}
           <label> Add Price</label>
           <input
+            className="input"
             type="text"
             placeholder="Price..."
             value={price}
@@ -71,11 +69,15 @@ const Additem = () => {
           ></input>
           <label> Add Image URL</label>
           <input
+            className="input"
             type="text"
             placeholder="Image URL..."
             value={newPic}
             onChange={(e) => setNewPic(e.target.value)}
           ></input>
+          <button className="add_btn" onClick={addHandler}>
+            Add
+          </button>
         </form>
       </div>
     </>
