@@ -19,7 +19,7 @@
 #main p {
   color: white;
 }
-button {
+.home-btn {
   background-image: url("https://images.unsplash.com/photo-1528459105426-b9548367069b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMGJ1dHRvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
   background-color: transparent;
   color: white;
@@ -29,6 +29,7 @@ button {
   background-repeat: no-repeat;
   font-weight: 700;
   cursor: pointer;
+  width: 19vw;
 }
 .banner-box {
   display: flex;
@@ -36,7 +37,7 @@ button {
   justify-content: center;
   align-items: flex-start;
   background-image: url("https://images.unsplash.com/photo-1556906781-9a412961c28c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
-  width: 43%;
+  width: 44%;
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -53,4 +54,30 @@ button {
 .box2 {
   background-image: url(" https://images.unsplash.com/photo-1520256862855-398228c41684?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
   opacity: 1;
+}
+.banner-box h4 {
+  font-size: 18px;
+  color: white;
+  background-color: gray;
+}
+
+.banner-box h2 {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+}
+.sponserd p {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+.img-countiner {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.img-countiner img {
+  width: 22vw;
+  border: 1px solid black;
+  height: 50vh;
 }

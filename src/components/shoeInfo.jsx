@@ -98,13 +98,7 @@ const ShoeInfo = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         ></input>
-        {/* <input
-          type="text"
-          placeholder="Id..."
-          style={{ margin: "20px" }}
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-        ></input> */}
+
         <label> Add Price</label>
         <input
           type="text"
