@@ -15,7 +15,7 @@
 
 .shoes-product-container {
   display: grid;
-  grid-template-columns: repeat(3, 30vw);
+  grid-template-columns: repeat(3, 32.5vw);
 
   /* grid-template-rows: repeat(2, 1fr); */
   /* justify-content: space-between; */
