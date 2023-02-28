@@ -49,6 +49,28 @@ const HomePage = () => {
           <img src="https://images.dsw.com/is/image/DSWShoes/P230153_editorial_retro?impolicy=qlt-medium&imwidth=1011&imdensity=1"></img>
         </div>
       </section>
+      <br></br>
+      <br></br>
+      <footer>
+        <div className="col">
+          <h4> Contact</h4>
+          <p>
+            <b>Address:</b> Lorem, ipsum dolor sit amet consectetur adipisicing.
+          </p>
+          <p>
+            <b>Phone:</b> 052365214
+          </p>
+          <p>
+            <b>Hours:</b> 10-118 Sat-Man
+          </p>
+        </div>
+        <div class="col">
+          <h4> Account</h4>
+          <p>Log In</p>
+          <p> Create an Acount </p>
+          <p>My order</p>
+        </div>
+      </footer>
     </>
   );
 };
